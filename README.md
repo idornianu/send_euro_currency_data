@@ -8,6 +8,7 @@ The script's logic is as follows:
   - the script will check if the value is higher than 4.92 or lower than 4.88 and depending on the case it will:
     a. send an email if the value is equal or lower than 4.88 with the title "Euro currency is at low value"
     b. send an email if the value is equal or higher than 4.92 with the title "Euro currency is at a high value"
-    c. do nothing if the value is higher than 4.88 and lower than 4.92
+    c. update the Send_Euro_data.log file with the value for the day when the currency is not tradeable.
+  - the script will empty the contents from all the output.txt files
     
 An additional cron job will be created in order to send the email with the output at 07:00am RO Time from Monday to Friday.
