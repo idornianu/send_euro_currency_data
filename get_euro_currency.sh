@@ -4,7 +4,7 @@ USERNAME=idornianu
 VALUE=$(cat /home/$USERNAME/Output_final.txt)
 TIMESTAMP=`date "+%Y-%m-%d %H:%M:%S"`
 
-curl https://bnr.ro/Home.aspx >> /home/idornianu/output.txt
+curl https://bnr.ro/Home.aspx >> /home/$USERNAME/output.txt
 cat /home/$USERNAME/output.txt | grep -i EUR >> /home/$USERNAME/output2.txt
 cat /home/$USERNAME/output2.txt | grep -o '4.92' >> /home/$USERNAME/Output_final.txt
 cat /home/$USERNAME/output2.txt | grep -o '4.93' >> /home/$USERNAME/Output_final.txt
@@ -28,14 +28,14 @@ truncate -s 0 /home/$USERNAME/output*
 
 if [ $VALUE >= 4.92 ];
  then
-    echo "Todays Euro value is $VALUE . You can SELL Euro today." | mail -s "Euro is at a high price" iuliandornianu97@outlook.com
+    echo "Valoarea Euro este $VALUE . Puteti vinde Euro." | mail -s "Euro are valoare inalta" iuliandornianu97@outlook.com
  else
     echo "Euro price is not good. $VALUE EUR - $TIMESTAMP" >> /home/$USERNAME/Send_Euro_Data.log
 fi
 
 if [ $VALUE <= '4.88' ];
  then
-    echo "Today's Euro value is $VALUE . You can BUY Euro today." | mail -s "Euro is at a low price" iuliandornianu97@outlook.com
+    echo "Valoarea Euro este $VALUE . Puteti cumpara Euro." | mail -s "Euro are valoare scazuta" iuliandornianu97@outlook.com
  else
     echo "Euro price is not good. $VALUE EUR - $TIMESTAMP" >> /home/$USERNAME/Send_Euro_data.log
 fi
