@@ -11,7 +11,7 @@ truncate -s 0 /home/$USERNAME/output*
 
 if [ $VALUE >= '4.92' ];
  then
-    echo "Euro price is not good. $VALUE EUR - $TIMESTAMP" >> /home/$USERNAME/Send_Euro_Data.log
+    echo "Valoarea Euro este $VALUE . Puteti vinde Euro." | mail -s "Euro are valoare ridicata" iuliandornianu97@outlook.com 
  else
     echo "Euro price is not good. $VALUE EUR - $TIMESTAMP" >> /home/$USERNAME/Send_Euro_Data.log
 fi
