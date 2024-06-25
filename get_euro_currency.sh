@@ -2,7 +2,7 @@
 
 USERNAME=$(whoami)
 VALUE=$(cat /home/$USERNAME/Output_final.txt)
-TIMESTAMP=`date "+%Y-%m-%d %H:%M:%S"`
+#TIMESTAMP=`date "+%Y-%m-%d %H:%M:%S"`
 
 truncate -s 0 /home/$USERNAME/output*
 curl https://bnr.ro/RSS_200003_EUR.aspx >> /home/$USERNAME/output.txt
