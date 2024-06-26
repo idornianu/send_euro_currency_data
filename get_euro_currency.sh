@@ -15,7 +15,7 @@ if [ ! -s /home/$USERNAME/output_final.txt ]; then
   exit 1
 fi
 
-echo $(cat output_final.txt) | sed -e 's/<title>//; s/<\/title>//' | s-nail -s "Valoare EURO" iuliandornianu97@outlook.com
+echo $(cat /home/$USERNAME/output_final.txt) | sed -e 's/<title>//; s/<\/title>//' | s-nail -s "Valoare EURO" iuliandornianu97@outlook.com
 
 #cat /home/$USERNAME/output.txt | grep -i EUR >> /home/$USERNAME/output2.txt
 #cat /home/$USERNAME/output2.txt | egrep -o '4.80|4.81|4.82|4.83|4.84|4.85|4.86|4.87|4.88|4.92|4.93|4.94|4.95|4.96|4.97|4.98|4.99|5.00' >> /home/$USERNAME/Output_final.txt
