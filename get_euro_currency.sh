@@ -25,6 +25,8 @@ truncate -s 0 /home/$USERNAME/output*
 #gather the raw data from BNR
 curl https://bnr.ro/RSS_200003_EUR.aspx >> /home/$USERNAME/output.txt
 
+sleep 15
+
 #check for yesterday's date for the EURO value
 cat /home/$USERNAME/output.txt | grep $YESTERDAY >> /home/$USERNAME/output_final.txt
 
