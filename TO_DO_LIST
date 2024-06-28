@@ -1,0 +1,4 @@
+1. Create a copy of the script within the repo
+2. Remove all the comments within the original file, the copy file will contain the comments. For new additions, the copy file will be updated as well while adding new comments where necessary
+3. Modify "DAY_OF_WEEK=$( date +%u)" to "DAY_OF_WEEK=$(date +%u)"
+4. Make the script compare the today's value with the one from yesterday ( within the code, make it look for yesterday's value and the day before that ) and send the email with an additional "The value is higher/lower than yesterday" line.
