@@ -1,0 +1,11 @@
+--VERSIONING NAME CONVENTION--
+
+FOR small bug fixes, the version will be marked as X.x1
+
+FOR new features added, the version will be marked as X.1
+
+FOR a whole new design of the script, the version will be marked as 1.x
+
+Where X is the major version, x is the updated version, and what comes after x is a bug fix only
+
+--VERSIONING NAME CONVENTION--
