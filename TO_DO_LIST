@@ -34,4 +34,6 @@ if [ $? -ne 0 ]; then
   exit 1
 fi"
 
-5. Make the script compare the today's value with the one from yesterday ( within the code, make it look for yesterday's value and the day before that ) and send the email with an additional "The value is higher/lower than yesterday" line.
+5. The first email sent in the next day is being sent with the value from 2 days before. The second email has the correct value. Create a temporary solution until the culprit is found.
+
+6. Make the script compare the today's value with the one from yesterday ( within the code, make it look for yesterday's value and the day before that ) and send the email with an additional "The value is higher/lower than yesterday" line.
