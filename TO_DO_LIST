@@ -3,3 +3,4 @@ Bug fixes:
 
 Features:
 - Make the script compare the today's value with the one from yesterday ( within the code, make it look for yesterday's value and the day before that ) and send the email with an additional "The value is higher/lower than yesterday" line.
+- Create an average value for the currency for the week - to be sent Monday morning weekly
