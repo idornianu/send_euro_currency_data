@@ -1,5 +1,5 @@
 Bug fixes:
-- Tidy up the code: remove the "sed" command from the 'send email' part of the script
+- Tidy up the code: remove the "sed" command from the 'send email' part of the script; for the 's-nail' command, remove the hard coded email address for the recipient and create a variable called "RECIPIENT"
 
 Features:
 - Make the script compare the today's value with the one from yesterday ( within the code, make it look for yesterday's value and the day before that ) and send the email with an additional "The value is higher/lower than yesterday" line.
