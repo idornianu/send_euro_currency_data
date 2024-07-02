@@ -2,7 +2,6 @@
 
 #variables
 USERNAME=$(whoami)
-EXCHGRT=$(awk '{print $1, $2, $3, $4}' /home/$USERNAME/output_final.txt)
 DATE=$(date "+%d-%m-%Y")
 DAY_OF_WEEK=$(date +%u)
 ATTEMPT=1
@@ -24,7 +23,7 @@ download_data() {
   return 1  # Failure
 }
 
-#nitiate the download process and email send
+#nitiate the download process
 truncate -s 0 /home/$USERNAME/output*
 
 if [ "$DAY_OF_WEEK" -eq 1 ]; then
@@ -42,7 +41,8 @@ if [ ! -s /home/$USERNAME/output_final.txt ]; then
   exit 1
 fi
 
-#gather the exchange rate from yesterday and the date from today, remove the HTML tags, send email 2
+#gather the exchange rate from yesterday and the date from today, remove the HTML tags, send email
+EXCHGRT=$(awk '{print $1, $2, $3, $4}' /home/$USERNAME/output_final.txt)
 echo "$EXCHGRT RON - $DATE" | sed -e 's/<title>//; s/<\/title>//' | s-nail -s "Valoare EURO $(date "+%d-%m-%Y")" iuliandornianu97@outlook.com
 
 exit
