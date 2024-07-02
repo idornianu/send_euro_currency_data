@@ -1,3 +1,5 @@
-1. The first email sent in the next day is being sent with the value from 2 days before. The second email has the correct value. MONITORING
+Bug fixes:
+- Tidy up the code: remove the "sed" command from the 'send email' part of the script
 
-2. Make the script compare the today's value with the one from yesterday ( within the code, make it look for yesterday's value and the day before that ) and send the email with an additional "The value is higher/lower than yesterday" line.
+Features:
+- Make the script compare the today's value with the one from yesterday ( within the code, make it look for yesterday's value and the day before that ) and send the email with an additional "The value is higher/lower than yesterday" line.
