@@ -6,3 +6,8 @@ The script runs following this set of instructions:
   - using grep, the value of the Euro currency will be placed in an output file locally
   - it will send an email with the output of the output_final.txt file to the provided email addresses
   - the script will empty the contents from all the output* files so it can fetch the value of the EURO currency the next day
+
+Requirements:
+- set up an email relay
+- install s-nail
+- set up a cron job according to your preference
